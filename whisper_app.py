@@ -295,6 +295,12 @@ class WhisperApp(QMainWindow):
         self.setWindowTitle("Whisper Transcription Tool")
         self.setGeometry(100, 100, 900, 600)
         
+        # Устанавливаем иконку приложения
+        icon_path = "icon.ico"  # Убедитесь, что файл icon.ico находится в той же папке, что и скрипт
+        if os.path.exists(icon_path):
+            from PyQt6.QtGui import QIcon
+            self.setWindowIcon(QIcon(icon_path))
+
         # Основной виджет и компоновка
         main_widget = QWidget()
         self.setCentralWidget(main_widget)
