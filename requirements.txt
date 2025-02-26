@@ -3,3 +3,6 @@ pydub>=0.25.1
 pandas>=2.0.0
 soundfile>=0.12.1
 PyQt6>=6.5.0
+torch>=2.0.0
+torchaudio>=2.0.0
+torchvision>=2.0.0
