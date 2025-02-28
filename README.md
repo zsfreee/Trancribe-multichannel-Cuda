@@ -18,6 +18,7 @@
 - Python 3.8 или выше
 - FFmpeg (требуется для обработки аудио)
 - NVIDIA GPU с CUDA для ускорения (опционально)
+- Git https://git-scm.com/downloads/
 
 ## Установка
 
