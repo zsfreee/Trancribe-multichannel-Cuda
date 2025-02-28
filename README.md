@@ -15,7 +15,7 @@
 
 ## Требования
 
-- Python 3.8 или выше
+- Python 3.12.7
 - FFmpeg (требуется для обработки аудио)
 - NVIDIA GPU с CUDA для ускорения (опционально)
 - Git https://git-scm.com/downloads/
@@ -52,6 +52,12 @@ pip install torch torchvision torchaudio
 ```
 pip install -r requirements.txt
 ```
+
+Если ошибка в requirements с torchvision
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install git+https://github.com/openai/whisper.git
+pip install pydub pandas soundfile PyQt6
 
 ### 5. Установите FFmpeg:
 
