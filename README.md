@@ -72,17 +72,17 @@ pip install pydub pandas soundfile PyQt6
 - Скопируйте все файлы .exe и .dll из папки bin в корень проекта
 
 Например, для Windows 64bit - необходимо перенести в корневую папку проекта следующие файлы из папки bin ffmpeg:
-avcodec-61.dll
-avdevice-61.dll
-avfilter-10.dll
-avformat-61.dll
-avutil-59.dll
-postproc-58.dll
-swresample-5.dll
-swscale-8.dll
-ffmpeg.exe
-ffplay.exe
-ffprobe.exe
+- avcodec-61.dll
+- avdevice-61.dll
+- avfilter-10.dll
+- avformat-61.dll
+- avutil-59.dll
+- postproc-58.dll
+- swresample-5.dll
+- swscale-8.dll
+- ffmpeg.exe
+- ffplay.exe
+- ffprobe.exe
 
 **Linux:**
 ```
