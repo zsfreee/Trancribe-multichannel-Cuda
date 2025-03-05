@@ -40,6 +40,11 @@ source venv/bin/activate
 ```
 
 ### 3. Установите PyTorch с поддержкой CUDA (для использования GPU):
+Не забываем обновить pip
+```
+python.exe -m pip install --upgrade pip
+```
+Установка PyTorch
 ```
 # Для NVIDIA GPU:
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
@@ -65,6 +70,8 @@ pip install pydub pandas soundfile PyQt6
 - Скачайте FFmpeg с [официального сайта](https://ffmpeg.org/download.html) или с [GitHub](https://github.com/BtbN/FFmpeg-Builds/releases) (выберите версию с "shared" в названии)
 - Распакуйте архив
 - Скопируйте все файлы .exe и .dll из папки bin в корень проекта
+
+Например, для Windows 64bit - необходимо перенести в корневую папку проекта следующие файлы из папки bin ffmpeg:
 
 **Linux:**
 ```
