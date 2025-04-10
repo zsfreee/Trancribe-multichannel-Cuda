@@ -1,0 +1,8 @@
+torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+git+https://github.com/openai/whisper.git@517a43ecd132a2089d85f4ebc044728a71d49f6e
+pydub==0.25.1
+pandas==2.2.3
+soundfile==0.13.1
+PyQt6==6.8.1
