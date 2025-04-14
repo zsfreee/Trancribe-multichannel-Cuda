@@ -44,7 +44,11 @@ source venv/bin/activate
 ```
 
 ### 3. Обновите pip:
-
+Windows
+```bash
+python.exe -m pip install --upgrade pip
+```
+Linux
 ```bash
 pip install --upgrade pip
 ```
