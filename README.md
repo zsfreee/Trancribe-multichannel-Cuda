@@ -1,25 +1,3 @@
-# Структура файлов и README.md для GitHub
-
-## 1. Файлы, которые нужно добавить:
-
-1. `cli_transcribe.py` - CLI-версия приложения для транскрибации
-2. `watch_and_transcribe.py` - Скрипт автоматизации для мониторинга директории
-3. `requirements_cpu.txt` - Файл требований для установки без CUDA
-
-## 2. Полный список файлов для GitHub:
-
-1. `.gitignore` - Файл для исключения из системы контроля версий
-2. `LICENSE` - Файл лицензии
-3. `README.md` - Документация по проекту
-4. `icon.ico` - Иконка приложения
-5. `requirements.txt` - Зависимости для версии с поддержкой CUDA
-6. `requirements_cpu.txt` - Зависимости для версии без CUDA (новый)
-7. `whisper_app.py` - Основной файл GUI-приложения
-8. `cli_transcribe.py` - CLI-версия приложения (новый)
-9. `watch_and_transcribe.py` - Скрипт автоматизации (новый)
-
-## 3. Обновленный README.md:
-
 ```markdown
 # Whisper Transcription Tool
 
