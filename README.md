@@ -94,6 +94,7 @@ ffprobe.exe
 ```bash
 sudo apt-get update
 sudo apt-get install ffmpeg
+sudo apt install -y ffmpeg libavcodec-extra
 ```
 
 **Mac:**
