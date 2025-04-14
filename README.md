@@ -54,9 +54,18 @@ pip install --upgrade pip
 ```bash
 # Для NVIDIA GPU:
 pip install -r requirements.txt
+```
 
-# Без GPU (экономит ~5-7 ГБ дискового пространства):
+### 4.1 Установите PyTorch БЕЗ поддержкой CUDA (для использования только на CPU):
+```bash
+pip install torch==2.6.0+cpu torchvision==0.21.0+cpu torchaudio==2.6.0+cpu --index-url https://download.pytorch.org/whl/cpu
+```
+```bash
 pip install -r requirements_cpu.txt
+```
+### Проверяем режим работы PyTorch
+```bash
+python -c "import torch; print('CUDA доступен:', torch.cuda.is_available()); print('Устройство:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
 ```
 
 ### 5. Установите FFmpeg:
