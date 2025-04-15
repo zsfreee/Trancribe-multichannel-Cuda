@@ -125,15 +125,20 @@ python whisper_app.py
 
 #### Установка Streamlit-версии:
 
-##### С поддержкой CUDA (для использования GPU):
+##### Полная установка с поддержкой CUDA (для использования GPU):
 ```bash
 pip install -r requirements_streamlit.txt
 ```
 
-##### Без поддержки CUDA (только CPU):
+##### Полная установка без поддержки CUDA (только CPU):
 ```bash
 pip install torch==2.6.0+cpu torchvision==0.21.0+cpu torchaudio==2.6.0+cpu --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements_streamlit_cpu.txt
+```
+
+##### Минимальная установка (если у вас уже установлены основные зависимости):
+```bash
+pip install -r streamlit_minimal.txt
 ```
 
 #### Запуск Streamlit-приложения:
