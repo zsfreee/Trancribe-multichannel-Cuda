@@ -132,6 +132,7 @@ pip install -r requirements_streamlit.txt
 
 ##### Без поддержки CUDA (только CPU):
 ```bash
+pip install torch==2.6.0+cpu torchvision==0.21.0+cpu torchaudio==2.6.0+cpu --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements_streamlit_cpu.txt
 ```
 
@@ -143,21 +144,59 @@ streamlit run streamlit_app.py
 Приложение будет доступно по адресу http://localhost:8501
 
 В веб-интерфейсе:
-1. На вкладке "Файлы" загрузите аудиофайлы для обработки
-2. На вкладке "Параметры" настройте параметры модели Whisper для каждого канала
-3. На вкладке "Выполнение" нажмите "Начать транскрибацию" и следите за процессом
+1. На вкладке "📁 Файлы" загрузите аудиофайлы для обработки
+2. На вкладке "⚙️ Параметры" настройте параметры модели Whisper для каждого канала
+3. На вкладке "▶️ Выполнение" нажмите "🚀 Начать транскрибацию" и следите за процессом
 4. После завершения скачайте результаты в виде ZIP-архива
+
+#### Проверка режима работы (CUDA/CPU):
+Информация о текущем режиме работы (CUDA GPU или CPU) отображается в заголовке приложения.
 
 #### Развертывание Streamlit-приложения на сервере:
 
 1. **Установка на сервер**:
    ```bash
-   pip install -r requirements_streamlit.txt  # или requirements_streamlit_cpu.txt
+   # Для GPU-версии:
+   pip install -r requirements_streamlit.txt
+   
+   # Для CPU-версии:
+   pip install torch==2.6.0+cpu torchvision==0.21.0+cpu torchaudio==2.6.0+cpu --index-url https://download.pytorch.org/whl/cpu
+   pip install -r requirements_streamlit_cpu.txt
    ```
 
 2. **Запуск на сервере с доступом из внешней сети**:
    ```bash
    streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+   ```
+
+3. **Настройка постоянной работы через systemd**:
+   
+   Создайте файл сервиса:
+   ```bash
+   sudo nano /etc/systemd/system/whisper-streamlit.service
+   ```
+   
+   Содержимое файла:
+   ```
+   [Unit]
+   Description=Whisper Transcription Streamlit Server
+   After=network.target
+
+   [Service]
+   User=ubuntu
+   WorkingDirectory=/path/to/Trancribe-multichannel-Cuda
+   ExecStart=/path/to/venv/bin/streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+   Restart=on-failure
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+   
+   Активация и запуск:
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable whisper-streamlit
+   sudo systemctl start whisper-streamlit
    ```
 
 ### Запуск GUI на сервере через X11 (для VPS без графического интерфейса)
