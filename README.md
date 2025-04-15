@@ -55,7 +55,9 @@ pip install --upgrade pip
 ```
 
 ### 4. Установите PyTorch с поддержкой CUDA (для использования GPU):
-
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
 ```bash
 # Для NVIDIA GPU:
 pip install -r requirements.txt
