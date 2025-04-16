@@ -359,7 +359,7 @@ def main():
         st.session_state.transcription_result = None
     
     # Стили для вкладок с адаптивным дизайном
-    st.markdown('''
+    st.markdown("""
     <style>
     .stTabs [data-baseweb="tab-list"] {
         gap: 20px;
@@ -418,7 +418,7 @@ def main():
         }
     }
     </style>
-    ''', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     # Создаем вкладки с тематическими смайликами (обычный текст)
     tab1, tab2, tab3, tab4 = st.tabs(["📁 Файлы", "⚙️ Параметры", "▶️ Выполнение", "ℹ️ Справка"])
