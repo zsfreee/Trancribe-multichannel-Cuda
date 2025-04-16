@@ -404,6 +404,18 @@ def main():
         .stTabs [role="tab"] p {
             font-size: 14px !important;
         }
+        
+        /* Адаптивные стили для таблицы в справке */
+        table {
+            font-size: 12px !important;
+            width: 100% !important;
+            table-layout: fixed !important;
+        }
+        th, td {
+            padding: 5px 2px !important;
+            word-wrap: break-word !important;
+            white-space: normal !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
@@ -640,3 +652,4 @@ def main():
         
 if __name__ == "__main__":
     main()
+````
